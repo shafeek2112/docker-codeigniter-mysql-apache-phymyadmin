@@ -1,0 +1,66 @@
+version: '3.3'
+
+networks:
+  php-mysql:
+
+services:
+  # apache:
+  #   build: './apache/'
+  #   depends_on:
+  #     - php
+  #     - mysql
+  #   networks:
+  #     - php-mysql
+  #   ports:
+  #     - "8080:80"
+  #   volumes:
+  #     - ./src:/var/www/html/
+
+  webapp:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    container_name: php
+    depends_on:
+      - mysql
+    volumes:
+      - ./src:/var/www/html/
+    ports:
+      - "8080:80"
+    networks:
+      - php-mysql
+
+  mysql:
+    image: mysql:8
+    container_name: mysql8
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    tty: true
+    environment:
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: devuser
+      MYSQL_PASSWORD: devpass
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+       - 3306:3306
+    networks:
+      - php-mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.0.1
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: user
+      PMA_PASSWORD: pass
+      UPLOAD_LIMIT: 3000000000
+    ports:
+      - "8888:80"
+    networks:
+      - php-mysql
+
+volumes:
+  mysql-data:

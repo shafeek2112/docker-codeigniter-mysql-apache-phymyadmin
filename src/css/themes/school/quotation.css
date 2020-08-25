@@ -1,0 +1,112 @@
+.invoice_outlet
+{
+    margin-top : 10px !important;
+}
+
+.invoice-row-seperate{
+    border-top: 3px solid #b7c7d5 !important;
+}
+
+.justify-content-md-center{
+    margin-top : 50px;
+}
+.invoice-detail{
+
+    max-width : 800px !important;
+    border : 1px solid #cccccc;
+    border-radius: 5px;
+    min-height: 1150px;
+    position: relative;
+    margin: auto;
+    margin-bottom : 20px;
+    overflow: hidden;
+}
+.mg-top-10{
+    margin-top : 10px !important;
+}
+.icr-logo-vertical{
+    width : 100%;
+}
+.logo-description-vertical h2{
+    font-weight : bold !important;
+    margin-bottom : 0px !important;
+    margin-top : 10px !important;
+}
+.logo-description-vertical h3{
+    font-weight : bold !important;
+    margin-top : 0px !important;
+}
+.pd-top-40
+{
+    padding-top : 40px;
+}
+.icr-logo-cn{
+    width : 40%;
+}
+.icr-logo
+{
+    width : 35%;
+}
+.icr-payment-logo
+{
+    width : 100% !important;
+}
+.logo-description h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.logo-description p , .logo-description-vertical p{
+    margin-bottom : 0px;
+}
+.holdingInfo{
+    text-align: center;
+    position: relative;
+    top : -70px;
+    left : 305px;
+    font-size : 12px;
+    height : 15px;
+}
+
+.all_cap_letter{
+    text-transform: uppercase;
+}
+
+.invoice-detail h4{
+    background-color : #b7c7d5;
+    padding : 5px;
+    border : 1px solid #0f4777;
+    border-radius: 2px;
+}
+.header-detail{
+    width : 100%;
+}
+.td-label{
+    width : 20%;
+}
+.td-field{
+    width : 30%;
+}
+
+.invoice-notes ul li
+{
+    list-style-type: decimal;
+}
+
+.invoice-thanks{
+    margin-left : 20px;
+    margin-top : 20px;
+}
+
+.sub_row{
+    padding-left: 20px !important;
+    color: #00a65a !important;
+    border: 0px !important;
+    padding-top: 0px !important;
+}
+
+.signature-place{
+    width : 50%;
+    margin-left : 25%;
+    margin-top : 100px;
+    border-top : 1px solid #000000;
+}
